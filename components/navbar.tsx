@@ -15,7 +15,7 @@ const Navbar = async () => {
     where: {
       userId,
     },
-  });
+  })
 
   return (
     <div className="border-b">

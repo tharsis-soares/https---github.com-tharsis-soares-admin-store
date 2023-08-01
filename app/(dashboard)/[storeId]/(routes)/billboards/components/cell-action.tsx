@@ -35,6 +35,7 @@ export const CellAction: React.FC<CellActionProps> = ({
             setLoading(true)
             await axios.delete(`/api/${params.storeId}/billboards/${data.id}`)
             router.refresh()
+            router.push(`/${params.storeId}/billboards`)
             toast.success("Painél deletado")
         } catch (error) {
             toast.error("erro")

@@ -94,7 +94,7 @@ export function MainNav({
           <MenubarTrigger className="relative">Financeiro</MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
-              <MenubarSubTrigger>New</MenubarSubTrigger>
+              <MenubarSubTrigger>Novo</MenubarSubTrigger>
               <MenubarSubContent className="w-[230px]">
                 <MenubarItem>
                   Playlist <MenubarShortcut>⌘N</MenubarShortcut>

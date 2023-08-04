@@ -97,7 +97,7 @@ export function MainNav({
               <MenubarSubTrigger>Novo</MenubarSubTrigger>
               <MenubarSubContent className="w-[230px]">
                 <MenubarItem>
-                  Playlist <MenubarShortcut>⌘N</MenubarShortcut>
+                  Venda <MenubarShortcut>⌘N</MenubarShortcut>
                 </MenubarItem>
                 <MenubarItem disabled>
                   Playlist from Selection <MenubarShortcut>⇧⌘N</MenubarShortcut>

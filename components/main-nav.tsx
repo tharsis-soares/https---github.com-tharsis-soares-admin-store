@@ -60,17 +60,17 @@ export function MainNav({
       className={cn("flex items-center space-x-4 lg:space-x-6", className)}
       {...props}
     >
-    <Menubar className="rounded-none border-b border-none px-2 lg:px-4">
-    <MenubarMenu>
-            <Link href={`/${params.storeId}/`}>
-            <MenubarTrigger>Dashboard</MenubarTrigger>
-            </Link>
-          </MenubarMenu>
+      <Menubar className="rounded-none border-b border-none px-2 lg:px-4">
         <MenubarMenu>
-        <MenubarTrigger className="font-bold">Cadastros</MenubarTrigger>
+          <Link href={`/${params.storeId}/`}>
+            <MenubarTrigger>Dashboard</MenubarTrigger>
+          </Link>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className="font-bold">Cadastros</MenubarTrigger>
           <MenubarContent>
             <Link href={`/${params.storeId}/billboards`}>
-                <MenubarItem>Clientes</MenubarItem>
+              <MenubarItem>Clientes</MenubarItem>
             </Link>
             <MenubarItem>Fornecedores</MenubarItem>
             <MenubarItem>Produtos/Serviços</MenubarItem>
@@ -231,7 +231,9 @@ export function MainNav({
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger className="hidden md:block">Contabilidade</MenubarTrigger>
+          <MenubarTrigger className="hidden md:block">
+            Contabilidade
+          </MenubarTrigger>
           <MenubarContent forceMount>
             <MenubarLabel inset>Switch Account</MenubarLabel>
             <MenubarSeparator />
@@ -245,6 +247,11 @@ export function MainNav({
             <MenubarSeparator />
             <MenubarItem inset>Add Account...</MenubarItem>
           </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+            <Link href={`/${params.storeId}/settings`}>
+              <MenubarTrigger>Configurações</MenubarTrigger>
+            </Link>
         </MenubarMenu>
       </Menubar>
     </nav>

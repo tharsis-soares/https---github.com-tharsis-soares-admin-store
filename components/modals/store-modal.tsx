@@ -44,8 +44,8 @@ export const StoreModal = () => {
     }
     return (
         <Modal
-            title="Criar loja"
-            description="Adicionar nova loja para gerenciar produtos e categorias"
+            title="Criar empresa"
+            description="Adicionar nova empresa para gerenciar movimentações"
             isOpen={storeModal.isOpen}
             onClose={storeModal.onClose}
         >
@@ -64,7 +64,7 @@ export const StoreModal = () => {
                                         <FormControl>
                                             <Input
                                                 disabled={loading}
-                                                placeholder='digite o nome da loja'
+                                                placeholder='digite o nome da empresa'
                                                 {...field}
                                             />
                                         </FormControl>

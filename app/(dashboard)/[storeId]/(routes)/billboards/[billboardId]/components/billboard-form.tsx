@@ -84,7 +84,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
       router.refresh();
       router.push(`/${params.storeId}/billboards`);
-      toast.success("Loja apagada");
+      toast.success("Empresa apagada");
     } catch (err) {
       toast.error(
         "Tenha certeza de apagar todos produtos e categorias primeiro."

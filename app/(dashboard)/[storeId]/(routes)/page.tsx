@@ -77,10 +77,10 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                 Analytics
               </TabsTrigger>
               <TabsTrigger value="reports" disabled>
-                Reports
+                Relatórios
               </TabsTrigger>
               <TabsTrigger value="notifications" disabled>
-                Notifications
+                Notificações
               </TabsTrigger>
             </TabsList>
             <TabsContent value="overview" className="space-y-4">
@@ -88,7 +88,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Total Revenue
+                      Total de Vendas
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -106,14 +106,14 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                   <CardContent>
                     <div className="text-2xl font-bold">$45,231.89</div>
                     <p className="text-xs text-muted-foreground">
-                      +20.1% from last month
+                      +20.1% sobre o mes passado
                     </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Subscriptions
+                      Novos Clientes
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -133,13 +133,13 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                   <CardContent>
                     <div className="text-2xl font-bold">+2350</div>
                     <p className="text-xs text-muted-foreground">
-                      +180.1% from last month
+                      +180.1% sobre o mes passado
                     </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                    <CardTitle className="text-sm font-medium">Vendas</CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -157,14 +157,14 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                   <CardContent>
                     <div className="text-2xl font-bold">+12,234</div>
                     <p className="text-xs text-muted-foreground">
-                      +19% from last month
+                      +19% sobre o mes passado
                     </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Active Now
+                      Clientes Ativos
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +182,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                   <CardContent>
                     <div className="text-2xl font-bold">+573</div>
                     <p className="text-xs text-muted-foreground">
-                      +201 since last hour
+                      +201 nas últimas horas
                     </p>
                   </CardContent>
                 </Card>
@@ -190,7 +190,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                 <Card className="col-span-4">
                   <CardHeader>
-                    <CardTitle>Overview</CardTitle>
+                    <CardTitle>Visão Geral</CardTitle>
                   </CardHeader>
                   <CardContent className="pl-2">
                     <Overview />
@@ -198,9 +198,9 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                 </Card>
                 <Card className="col-span-3">
                   <CardHeader>
-                    <CardTitle>Recent Sales</CardTitle>
+                    <CardTitle>Vendas Recentes</CardTitle>
                     <CardDescription>
-                      You made 265 sales this month.
+                      265 vendas concretizadas este mes.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>

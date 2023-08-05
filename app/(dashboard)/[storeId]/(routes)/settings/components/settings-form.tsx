@@ -40,77 +40,77 @@ interface SettingsFormProps {
 
 const formSchema = z.object({
   name: z.string().min(1),
-  corporateName: z.string().min(5, {
-    message: "Razão Social deve ter no mímino 5 caracteres.",
-  }).max(30, {
-    message: "Razão Social deve ter no máximo 30 caracteres.",
-  }).optional(),
-  document: z.string().min(8, {
-    message: "Número do documento obrigatório no mímino 8 caracteres.",
-  }).max(15, {
-    message: "Username must not be longer than 30 caracters.",
-  }).optional(),
-  stateDoc: z.string().min(2, {
-    message: "Estado deve ter no mínimo 2 caracteres.",
-  }).max(15, {
-    message: "Estado deve ter no máximo 15 caracteres.",
-  }).optional(),
-  cityDoc: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  phoneNumber: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  streetAddress: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  addressNumber: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  cityName: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  stateName: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  bankName: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  accountNumber: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }),
-  accountName: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  accountType: z.string().min(2, {
-    message: "Cidade deve ter mínimo 2 characters.",
-  }).max(30, {
-    message: "Username must not be longer than 30 caracteres.",
-  }).optional(),
-  email: z
-    .string({
-      required_error: "Please select an email to display.",
-    })
-    .email().optional(),
-  bio: z.string().max(160).min(4).optional(),
+  // corporateName: z.string().min(5, {
+  //   message: "Razão Social deve ter no mímino 5 caracteres.",
+  // }).max(30, {
+  //   message: "Razão Social deve ter no máximo 30 caracteres.",
+  // }).optional(),
+  // document: z.string().min(8, {
+  //   message: "Número do documento obrigatório no mímino 8 caracteres.",
+  // }).max(15, {
+  //   message: "Username must not be longer than 30 caracters.",
+  // }).optional(),
+  // stateDoc: z.string().min(2, {
+  //   message: "Estado deve ter no mínimo 2 caracteres.",
+  // }).max(15, {
+  //   message: "Estado deve ter no máximo 15 caracteres.",
+  // }).optional(),
+  // cityDoc: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // phoneNumber: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // streetAddress: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // addressNumber: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // cityName: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // stateName: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // bankName: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // accountNumber: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }),
+  // accountName: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // accountType: z.string().min(2, {
+  //   message: "Cidade deve ter mínimo 2 characters.",
+  // }).max(30, {
+  //   message: "Username must not be longer than 30 caracteres.",
+  // }).optional(),
+  // email: z
+  //   .string({
+  //     required_error: "Please select an email to display.",
+  //   })
+  //   .email().optional(),
+  // bio: z.string().max(160).min(4).optional(),
   urls: z
     .array(
       z.object({
@@ -148,7 +148,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             setLoading(true);
             await axios.patch(`/api/stores/${params.storeId}`, data)
             router.refresh()
-            toast.success('Loja atualizada')
+            toast.success('Empresa atualizada')
         } catch (err) {
             toast.error("Alguma coisa errada aconteceu")
         } finally {
@@ -163,7 +163,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             await axios.delete(`/api/stores/${params.storeId}`)
             router.refresh()
             router.push('/')
-            toast.success('Loja apagada')
+            toast.success('Empresa apagada')
         } catch (err) {
             toast.error("Tenha certeza de apagar todos produtos e categorias primeiro.")
         } finally {
@@ -180,10 +180,10 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             onConfirm={onDelete}
             loading={loading}
         />
-        <div className="flex items-center justify-between">
-            <Heading
+        {/*<div className="flex items-center justify-between">
+             <Heading
                 title="Settings"
-                description="Gerencie preferencias da teste loja"
+                description="Gerencie as configurações da empresa"
             />
             <Button
                 disabled={loading}
@@ -193,15 +193,14 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             >
                 <Trash />
             </Button>
-            </div>
-            <Separator />
+            </div> */}
             <Form {...form}>
             <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Nome Fantasia</FormLabel>
               <FormControl>
                 <Input placeholder="shadcn" {...field} />
               </FormControl>
@@ -213,7 +212,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             </FormItem>
           )}
         />
-        <FormField
+        {/* <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
@@ -238,28 +237,8 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
               <FormMessage />
             </FormItem>
           )}
-        />
-        <FormField
-          control={form.control}
-          name="bio"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Bio</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Tell us a little bit about yourself"
-                  className="resize-none"
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription>
-                You can <span>@mention</span> other users and organizations to
-                link to them.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+          />*/}
+        
         <div>
           {fields.map((field, index) => (
             <FormField

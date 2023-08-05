@@ -39,21 +39,78 @@ interface SettingsFormProps {
 
 
 const formSchema = z.object({
-    name: z.string().min(1),
-    username: z
-    .string()
-    .min(2, {
-      message: "Username must be at least 2 characters.",
-    })
-    .max(30, {
-      message: "Username must not be longer than 30 characters.",
-    }),
+  name: z.string().min(1),
+  corporateName: z.string().min(5, {
+    message: "Razão Social deve ter no mímino 5 caracteres.",
+  }).max(30, {
+    message: "Razão Social deve ter no máximo 30 caracteres.",
+  }).optional(),
+  document: z.string().min(8, {
+    message: "Número do documento obrigatório no mímino 8 caracteres.",
+  }).max(15, {
+    message: "Username must not be longer than 30 caracters.",
+  }).optional(),
+  stateDoc: z.string().min(2, {
+    message: "Estado deve ter no mínimo 2 caracteres.",
+  }).max(15, {
+    message: "Estado deve ter no máximo 15 caracteres.",
+  }).optional(),
+  cityDoc: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  phoneNumber: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  streetAddress: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  addressNumber: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  cityName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  stateName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  bankName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  accountNumber: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  accountName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
+  accountType: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }).optional(),
   email: z
     .string({
       required_error: "Please select an email to display.",
     })
-    .email(),
-  bio: z.string().max(160).min(4),
+    .email().optional(),
+  bio: z.string().max(160).min(4).optional(),
   urls: z
     .array(
       z.object({
@@ -141,7 +198,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             <Form {...form}>
             <FormField
           control={form.control}
-          name="username"
+          name="name"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Username</FormLabel>

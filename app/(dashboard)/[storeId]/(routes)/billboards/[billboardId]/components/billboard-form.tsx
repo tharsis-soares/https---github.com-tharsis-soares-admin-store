@@ -47,9 +47,9 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? "Editar painel" : "Criar painel";
-  const description = initialData ? "Editar painel" : "Criar novo painel";
-  const toastMessage = initialData ? "painel editado" : "painel criado";
+  const title = initialData ? "Editar cliente" : "Cadastrar cliente";
+  const description = initialData ? "Editar cliente" : "Cadastrar novo cliente";
+  const toastMessage = initialData ? "Cliente editado" : "Cliente cadastrado";
   const action = initialData ? "Salvar painel" : "Criar";
 
   const form = useForm<BillboardFormValues>({
@@ -122,24 +122,6 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-8 w-full"
         >
-          <FormField
-            control={form.control}
-            name="imageUrl"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Imagem de fundo</FormLabel>
-                <FormControl>
-                  <ImageUpload
-                    value={field.value ? [field.value] : []}
-                    disabled={loading}
-                    onChange={(url) => field.onChange(url)}
-                    onRemove={() => field.onChange("")}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
           <div className="grid grid-cols-3 gap-8">
             <FormField
               control={form.control}
@@ -159,6 +141,24 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
               )}
             />
           </div>
+          <FormField
+            control={form.control}
+            name="imageUrl"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Imagem de fundo</FormLabel>
+                <FormControl>
+                  <ImageUpload
+                    value={field.value ? [field.value] : []}
+                    disabled={loading}
+                    onChange={(url) => field.onChange(url)}
+                    onRemove={() => field.onChange("")}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <Button disabled={loading} className="ml-auto" type="submit">
             {action}
           </Button>

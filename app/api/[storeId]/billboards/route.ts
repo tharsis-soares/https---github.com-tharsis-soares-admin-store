@@ -41,7 +41,23 @@ export async function POST(
 
         const billboard = await prismadb.billboard.create({
             data: {
-                label, imageUrl, storeId: params.storeId
+                label,
+                imageUrl,
+                storeId: params.storeId,
+                corporateName: '',
+                name: '',
+                document: '',
+                stateDoc: '',
+                cityDoc: '',
+                phoneNumber: '',
+                streetAddress: '',
+                addressNumber: '',
+                cityName: '',
+                stateName: '',
+                bankName: '',
+                accountNumber: '',
+                accountName: '',
+                accountType: '',
             }
         })
         

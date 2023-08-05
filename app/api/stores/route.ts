@@ -19,7 +19,21 @@ export async function POST(req: Request) {
 
         const store = await prismadb.store.create({
             data: {
-                name, userId
+                name,
+                userId,
+                corporateName: '',
+                document: '',
+                stateDoc: '',
+                cityDoc: '',
+                phoneNumber: '',
+                streetAddress: '',
+                addressNumber: '',
+                cityName: '',
+                stateName: '',
+                bankName: '',
+                accountNumber: '',
+                accountName: '',
+                accountType: '',
             }
         })
         

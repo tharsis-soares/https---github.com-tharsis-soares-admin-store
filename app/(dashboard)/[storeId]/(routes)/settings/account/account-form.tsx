@@ -45,21 +45,87 @@ const languages = [
   { label: "Chinese", value: "zh" },
 ] as const
 
+
 const accountFormSchema = z.object({
-  name: z
-    .string()
-    .min(2, {
-      message: "Name must be at least 2 characters.",
+  name: z.string().min(1),
+  corporateName: z.string().min(5, {
+    message: "Razão Social deve ter no mímino 5 caracteres.",
+  }).max(30, {
+    message: "Razão Social deve ter no máximo 30 caracteres.",
+  }),
+  document: z.string().min(8, {
+    message: "Número do documento obrigatório no mímino 8 caracteres.",
+  }).max(15, {
+    message: "Username must not be longer than 30 caracters.",
+  }),
+  stateDoc: z.string().min(2, {
+    message: "Estado deve ter no mínimo 2 caracteres.",
+  }).max(15, {
+    message: "Estado deve ter no máximo 15 caracteres.",
+  }),
+  cityDoc: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  phoneNumber: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  streetAddress: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  addressNumber: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  cityName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  stateName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  bankName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  accountNumber: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  accountName: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  accountType: z.string().min(2, {
+    message: "Cidade deve ter mínimo 2 characters.",
+  }).max(30, {
+    message: "Username must not be longer than 30 caracteres.",
+  }),
+  email: z
+    .string({
+      required_error: "Please select an email to display.",
     })
-    .max(30, {
-      message: "Name must not be longer than 30 characters.",
-    }),
-  dob: z.date({
-    required_error: "A date of birth is required.",
-  }),
-  language: z.string({
-    required_error: "Please select a language.",
-  }),
+    .email(),
+  bio: z.string().max(160).min(4),
+  urls: z
+    .array(
+      z.object({
+        value: z.string().url({ message: "Please enter a valid URL." }),
+      })
+    )
+    .optional(),
 })
 
 type AccountFormValues = z.infer<typeof accountFormSchema>
@@ -102,6 +168,108 @@ export function AccountForm() {
         />
         <FormField
           control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the name that will be displayed on your profile and in
+                emails.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the name that will be displayed on your profile and in
+                emails.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the name that will be displayed on your profile and in
+                emails.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the name that will be displayed on your profile and in
+                emails.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the name that will be displayed on your profile and in
+                emails.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Your name" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the name that will be displayed on your profile and in
+                emails.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* <FormField
+          control={form.control}
           name="dob"
           render={({ field }) => (
             <FormItem className="flex flex-col">
@@ -142,8 +310,8 @@ export function AccountForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
-        <FormField
+        /> */}
+        {/* <FormField
           control={form.control}
           name="language"
           render={({ field }) => (
@@ -203,7 +371,7 @@ export function AccountForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
         <Button type="submit">Update account</Button>
       </form>
     </Form>

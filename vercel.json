@@ -1,7 +1,6 @@
 {
     "rewrites": [
       {"source": "/admin/", "destination": "https://carameweb.com.br/"},
-      {"source": "/", "destination": "https://reefsys.com.br/"},
-      
+      {"source": "/", "destination": "https://reefsys.com.br/"}
     ]
   }
